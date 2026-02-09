@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="LOUIEGIE ROLDAN">
+  <title>Future Problems, Future Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background-color: #1a0233; overflow-x: hidden; font-family: 'Montserrat', sans-serif; }
+
+    nav ul li a { position: relative; transition: all 0.3s ease; }
+    nav ul li a:hover { color: #d1d1d1 !important; }
+    nav ul li a::after {
+      content: ''; position: absolute; width: 0; height: 2px;
+      bottom: -5px; left: 0; background-color: white; transition: width 0.3s ease;
+    }
+    nav ul li a:hover::after { width: 100%; }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-box {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .delay-4 { animation-delay: 0.8s; }
+    .delay-5 { animation-delay: 1.0s; }
+
+    .blog-card { transition: transform 0.3s ease; }
+    .blog-card:hover { transform: translateY(-10px); }
+  </style>
+</head>
+ 
+<body> 
+  <nav style="background-color: rgba(55, 6, 113, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); position: fixed; top: 0; left: 0; width: 100%; height: 70px; z-index: 9999; display: flex; align-items: center; justify-content: center; box-sizing: border-box; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 40px; align-items: center;">
+      <li><a href="#" style="color: white; text-decoration: none; font-size: 15px; font-weight: 500;">Home</a></li>
+      <li onmouseover="this.querySelector('.dropdown').style.display='block'" onmouseout="this.querySelector('.dropdown').style.display='none'" style="position: relative; cursor: pointer; color: white; font-size: 15px; font-weight: 500; height: 70px; display: flex; align-items: center;">
+        Blogs ▼
+        <div class="dropdown" style="display: none; position: absolute; top: 70px; left: 50%; transform: translateX(-50%); background-color: rgba(40, 40, 40, 0.95); backdrop-filter: blur(5px); min-width: 160px; box-shadow: 0px 8px 16px rgba(0,0,0,0.4); border-radius: 0 0 8px 8px;">
+          <a href="#blog-section" style="display: block; color: white; padding: 15px; text-decoration: none; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.1);">All Blogs</a>
+          <a href="#author-section" style="display: block; color: white; padding: 15px; text-decoration: none; font-size: 14px;">The Author</a>
+        </div>
+      </li>
+      <li><a href="#author-section" style="color: white; text-decoration: none; font-size: 15px; font-weight: 500;">About</a></li>
+    </ul>
+  </nav>
+
+  <main style="padding-top: 70px;">
+    <article class="animate-box delay-1" style="margin: 20px 40px;">
+      <div style="display: flex; align-items: center; padding: 100px 40px; min-height: 450px; border-radius: 12px; color: white; position: relative; overflow: hidden; background-image: linear-gradient(to left, rgba(55, 6, 113, 0) 0%, #370671 100%), url('https://wallpapers.com/images/high/dark-space-wallpaper-0mh5r43wp68yf29o.webp'); background-size: cover; background-position: center;">
+        <div style="flex: 1; max-width: 600px; z-index: 1;">
+          <h1 style="margin: 0; font-size: 3.5rem; line-height: 1.2;">Non-ending Memories<br> of Infinite Dreams</h1>
+          <div style="margin-top: 30px;">
+            <a href="#blog-section" style="display: inline-block; background-color: white; color: #370671; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div id="blog-section" style="display: flex; gap: 20px; padding: 40px; width: 100%; box-sizing: border-box;">
+      
+      <div class="animate-box delay-2 blog-card" style="flex: 1; background-color: #370671; border-radius: 15px; overflow: hidden; color: white; min-height: 450px; display: flex; flex-direction: column;">
+        <img src="https://www.zabala.eu/wp-content/uploads/2023/11/Artificial-intelligente-and-consultancy-1200x675.jpg" alt="AI" style="width: 100%; height: 180px; object-fit: cover; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
+        <div style="padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 style="margin: 0; font-size: 18px;">Blog 1:<br>The Undistinguishable Differences of AI to Human Work</h3>
+            <p style="font-size: 14px; opacity: 0.8; margin-top: 10px;">What are the comparisons with both the Humans and AI?</p>
+          </div>
+          <a href="#" style="display: block; background-color: white; color: #370671; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold;">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="animate-box delay-3 blog-card" style="flex: 1; background-color: #370671; border-radius: 15px; overflow: hidden; color: white; min-height: 450px; display: flex; flex-direction: column;">
+        <img src="https://d.ibtimes.co.uk/en/full/1753855/rip-haru-urara-what-killed-japanese-horse.webp?w=736&f=e21fe8782f1dfb6eff95f45ced5cccbe" alt="Haru Urara" style="width: 100%; height: 180px; object-fit: cover; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
+        <div style="padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 style="margin: 0; font-size: 18px;">Blog 2:<br>How Haru Urara Changed my Life</h3>
+            <p style="font-size: 14px; opacity: 0.8; margin-top: 10px;">How a horse that changed my whole mentality as a person.</p>
+          </div>
+          <a href="#" style="display: block; background-color: white; color: #370671; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold;">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="animate-box delay-4 blog-card" style="flex: 1; background-color: #370671; border-radius: 15px; overflow: hidden; color: white; min-height: 450px; display: flex; flex-direction: column;">
+        <img src="https://i.kym-cdn.com/editorials/icons/original/000/013/069/guy-pointing-at-himself.jpg" alt="Me" style="width: 100%; height: 180px; object-fit: cover; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);">
+        <div style="padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 style="margin: 0; font-size: 18px;">Blog 3: <br>Future Problems, Future Me</h3>
+            <p style="font-size: 14px; opacity: 0.8; margin-top: 10px;">My plans and hopes for the near future.</p>
+          </div>
+          <a href="#" style="display: block; background-color: white; color: #370671; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold;">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="author-section" class="animate-box delay-5" style="display: flex; align-items: center; margin: 40px; padding: 60px 40px; min-height: 400px; border-radius: 15px; color: white; position: relative; overflow: hidden; background-image: linear-gradient(to right, rgba(55, 6, 113, 0) 0%, #370671 80%), url('https://scontent.fcrk3-3.fna.fbcdn.net/v/t39.30808-6/342038172_1070920517216189_2336653557615929935_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFctu4-FoV4nHgfM3oRt8WTSVNUN4hX7alJU1Q3iFftqdV3Sc2AvK3qBLrxYk5hxKXlr1-cX0txzE3MGAATgRQr&_nc_ohc=DRsFWK3y62kQ7kNvwEUXltf&_nc_oc=Adn4w96bB1x8HjfHRF-JCz840H8724LaZ5SwXj7g4Cy_yImPSDXoAMw4NuJgiTpeKl0hYUN949oVLSYcBbeXPcLx&_nc_zt=23&_nc_ht=scontent.fcrk3-3.fna&_nc_gid=CPqDGNlYgBr81DSC9Scn0g&oh=00_Afu5uVg8Yb-qSpE55YLCv1H04GdnnG42Lc45ge012-KYRA&oe=698FEA58'); background-size: cover; background-position: center;">
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-end; text-align: right; z-index: 1;">
+        <h1 style="margin: 0; font-size: 2.5rem;">About The Author: <br><span style="font-weight: 300;">The Untold Story of Louiegie Roldan</span></h1>
+        <p style="margin-top: 20px; font-size: 16px; opacity: 0.9; max-width: 500px;">Discover the journey and the creative vision of Louiegie Roldan.</p>
+        <div style="margin-top: 30px;">
+          <a href="#" style="display: inline-block; background-color: white; color: #370671; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold;">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin: 40px; padding: 40px; color: white; background-color: rgba(255,255,255,0.05); border-radius: 15px;">
+        <h2 style="margin-top: 0; font-size: 20px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">Picture References</h2>
+        <p style="font-size: 13px; opacity: 0.6; line-height: 1.8;">
+            Main Background: <a href="https://starwalk.space/gallery/images/what-is-space/1540x866.jpg" style="color: white;">Starwalk Space</a><br>
+            Blog 1 (AI): <a href="https://www.zabala.eu/wp-content/uploads/2023/11/Artificial-intelligente-and-consultancy-1200x675.jpg" style="color: white;">Zabala Innovation</a><br>
+            Blog 2 (Haru Urara): <a href="https://d.ibtimes.co.uk/" style="color: white;">IBTimes UK</a><br>
+            Blog 3 (Pointing Guy): <a href="https://knowyourmeme.com/" style="color: white;">Know Your Meme</a>
+        </p>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: rgba(255,255,255,0.4); font-size: 12px;">
+      &copy; 2026 Louiegie Roldan | CSAD
+    </footer>
+  </main>
+</body>
+</html>
